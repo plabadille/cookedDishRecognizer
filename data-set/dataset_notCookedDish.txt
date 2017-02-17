@@ -1,0 +1,44 @@
+dataset notCookedDish (97.495 images)
+
+1-menu: (607 images)
+607 from restofolio crawler
+
+2-undressFood: (517 images)
+517 from restofolio
+
+3-rawFood: (795 images)
+285 from restofolio
+510 from ImageNet
+
+4-Drink: (1.072 images)
+110 from restofolio
+962 from ImageNet
+
+5-commercial: (710 images)
+710 from restofolio
+
+6-human: (13.436 images)
+203 from restofolio
+13.233 from lfw face database http://vis-www.cs.umass.edu/lfw/
+
+7-indoor: (15.771 images)
+151 from restofolio
+15.620 from http://web.mit.edu/torralba/www/indoor.html
+
+8-outdoor: (2.794 images)
+4 from restofolio
+103 from EurasianCitiesBase https://graphics.cs.msu.ru/en/research/projects/msr/geometry
+2.687 from Visual Cognition Laboratory http://cvcl.mit.edu/database.htm
+
+9-animal: (3.900 images)
+3.000 dogs and cat from https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition
+900 animals from KTH-ANIMALS (https://www.csc.kth.se/~heydarma/Datasets.html)
+
+10-object (30.226 images)
+30.226 from https://www.vision.caltech.edu/Image_Datasets/Caltech256/
+
+11-voc2007 (4.952 images) <- Diverse things except food
+4.952 from http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html
+
+12-mirflickr (24.979 images) <- Diverse things except food
+24.979 from http://press.liacs.nl/mirflickr/mirdownload.html
