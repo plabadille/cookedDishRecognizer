@@ -1,17 +1,22 @@
 '''
+This demo can only be run on Jupyter notebook. Please use the demo_display if you don't want to use a notebook ; note that you will not see the image (just title) without graphical output support.
 This model handle jpg and png image only.
 Just run it with your test file in /predictDemo/*
+
+Note: because of some openCv bugs you may have an exception throwed (error: (-215) ssize.area() > 0 in function cv::resize). If so, make sur:
+    -there's only JPEG or PNG images in the training or testing directory.
+    -the rows * cols of your image is inferior of 2^31
+    -Your color deepness is superior to 8 (for some weird reason..)
 '''
 
 #1-IMPORT
 import os, cv2, random
 import numpy as np
 
+import matplotlib.pyplot as plt
+from matplotlib import ticker
+
 from keras.models import Sequential, model_from_json
-from keras.layers import Input, Dropout, Flatten, Convolution2D, MaxPooling2D, Dense, Activation
-from keras.optimizers import RMSprop
-from keras.callbacks import ModelCheckpoint, Callback, EarlyStopping
-from keras.utils import np_utils
 
 ##Dir const
 PREDICT_DIR = 'data-set/predictDemo/'
@@ -40,9 +45,7 @@ print("-------Model load-----")
 print("----------------------\n")
 
 #3-DO PREDICTION
-path_image = []
 def read_image(file_path):
-    path_image.append(file_path)
     img = cv2.imread(file_path, cv2.IMREAD_COLOR) #cv2.IMREAD_GRAYSCALE
     return cv2.resize(img, (ROWS, COLS), interpolation=cv2.INTER_CUBIC)
 
@@ -67,8 +70,10 @@ print("-------PREDICTION:-------")
 print("-------------------------")
 
 for i in range(0,count):
-    print("\n" + "Image " + path_image[i] + ":")
     if predictions[i, 0] >= 0.5: 
         print('I am {:.2%} sure this is a cooked dish'.format(predictions[i][0]))
     else: 
         print('I am {:.2%} sure this is something else'.format(1-predictions[i][0]))
+
+    plt.imshow(test[i].T)
+    plt.show()
