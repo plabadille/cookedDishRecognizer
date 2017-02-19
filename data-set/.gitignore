@@ -1,0 +1,6 @@
+train/*
+!train/cookedDish_1.jpg
+!train/notCookedDish_1.jpg
+
+predictDemo/*
+!predictDemo/5rg70sef28_stjacquesfano.jpg

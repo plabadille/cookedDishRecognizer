@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#this script handle renaming and moving data contain in two folder imbrication far. The data are moved where this script is.
+
 total=0
 for folder in *; do
     if [ $folder != *".sh" ]
