@@ -21,6 +21,11 @@ DIFFERENCES:
 - generate more trends (like ROC curve).
 - Save the all model (json, weight and model) at each run
 - Some refactoring
+
+Note: because of some openCv bugs you may have an exception throwed (error: (-215) ssize.area() > 0 in function cv::resize). If so, make sur:
+    -there's only JPEG or PNG images in the training or testing directory.
+    -the rows * cols of your image is inferior of 2^31
+    -Your color deepness is superior to 8 (for some weird reason..)
 '''
 
 #0-IMPORT
@@ -56,9 +61,9 @@ COLS = 64
 CHANNELS = 3
 ##Training const
 NB_EPOCH = 50
-BATCH_SIZE = 16
+BATCH_SIZE = 50 #16 #100 best
 ##Cross validation const
-VALIDATION_PERCENT = 0.3
+VALIDATION_PERCENT = 0.45 #0.3
 RANDOM_STATE = 10
 ##Early stopping const
 EARLY_SOPPING_PATIENCE = 5
@@ -172,7 +177,7 @@ model = isPlat()
 #5-TRAIN, VALIDATION AND PREDICT
 ##Cross validation
 print('Splitting data into training and testing')
-X_train, X_test, y_train, y_test = train_test_split(train, labels, train_size=VALIDATION_PERCENT, random_state=RANDOM_STATE)
+X_train, X_test, y_train, y_test = train_test_split(train, labels, test_size=VALIDATION_PERCENT, random_state=RANDOM_STATE)
 
 ## Callback for loss logging per epoch
 class trendsHistory(Callback):
@@ -205,7 +210,7 @@ def generate_results(y_test, y_score):
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic curve')
+    plt.title('ROC Curve')
     plt.show()
 
 ##Start the learning and validation
@@ -260,7 +265,7 @@ for i in range(0,8):
     if predictions[i, 0] >= 0.5: 
         print('I am {:.2%} sure this is a cooked dish'.format(predictions[i][0]))
     else: 
-        print('I am {:.2%} sure this is a something else'.format(1-predictions[i][0]))
+        print('I am {:.2%} sure this is something else'.format(1-predictions[i][0]))
         
     plt.imshow(test[i].T)
     plt.show()
