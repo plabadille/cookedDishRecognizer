@@ -35,7 +35,7 @@ If you wish to see how I build my data-set for each classes, please read the two
 
 #### Accuracy and Losses per epoch:
 
-![png](latex/img/3-accLoss.png)
+![jpg](latex/img/3-accLoss.jpg)
 
 #### Prediction exemple:
 
