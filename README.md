@@ -7,6 +7,7 @@ Important note: I am far to be a neural network expert so I may have done some m
 
 ## The model
 This model is based on [CatdogNet - Keras Convnet Starter](https://www.kaggle.com/jeffd23/dogs-vs-cats-redux-kernels-edition/catdognet-keras-convnet-starter) by [Jeff Delaney](https://www.kaggle.com/jeffd23) witch is already based on [Building powerful image classification models using very little data](https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html) from Keras blog.
+
 The main differences are:
 - The data have been adapted for the need as well as some adjustment. 
 - This script also do cross validation
@@ -16,27 +17,42 @@ The main differences are:
 - Some refactoring
 
 ### Data-set
+
 This is a binary model so I just have two classes:
+
 - cookedDish
 - notCookedDish (often called "something else")
+
 If you wish to see how I build my data-set for each classes, please read the two .text file in cookedDishRecognizer/data-set/
+
 ![png](latex/img/dataset.png)
 
 ### Model Statistics
-Roc Curve:
+
+#### Roc Curve:
+
 ![png](latex/img/3-roc.png)
 
-Accuracy and Losses per epoch:
+#### Accuracy and Losses per epoch:
+
 ![png](latex/img/3-accLoss.png)
 
-Prediction exemple:
+#### Prediction exemple:
+
 I am 99.92% sure this is something else:
+
 ![png](latex/img/output_0_15.png)
+
 I am 68.02% sure this is something else:
+
 ![png](latex/img/output_0_21.png)
+
 I am 87.32% sure this is a cooked dish:
+
 ![png](latex/img/output_0_23.png)
+
 I am 96.58% sure this is a cooked dish:
+
 ![png](latex/img/output_0_27.png)
 
 
@@ -64,6 +80,7 @@ activate tensorflow #windows
 ```
 
 #### Install dependencies (please make sur you're in the Anaconda environment):
+
 If you want to have both, please create a new environment
 With gpu:
 ```
@@ -90,6 +107,7 @@ conda install -c conda-forge seaborn=0.7.1
 ```
 
 ### Without Anaconda (Unrecommended installation):
+
 Please install the dependencies:
 - Tensorflow: [Follow Tensorflow installation guide (choose gpu if you want)](https://www.tensorflow.org/install/)
 - Keras: [Follow Keras installation guide](https://keras.io/#installation)
@@ -111,7 +129,9 @@ cd cookedDishRecognizer
 
 ### Predict
 Just add your pictures in cookedDishRecognizer/data-set/predictDemo/
+
 This model only support .jpg and .png
+
 Then run the demo script:
 ```
 #without graphical support
@@ -127,10 +147,13 @@ jupyter notebook
 ```
 
 ### Train the model from scratch
+
 Warning, I can't provide the data-set (to heavy and this is a study set). So you'll need to build your own. If you just want ton learn there's plenty of data-set available for this (like dogs vs cats!).
 - Add pictures of your data-set in cookedDishRecognizer/data-set/train
 - These pictures have to be directly in the folder and have to been name like this: <CLASSNAME>_<NAME>.jpg/png.
+
 Note: You can use one of the script from cookedDishRecognizer/script to move file outside a folder and rename them automatically (the script have to be copy in cookedDishRecognizer/data-set/train). Don't forget to delete the script after.
+
 - Add your test pictures (not validation, just for test the prediction system) in cookedDishRecognizer/data-set/test/
 - Run the model (the script will work without edition but the classname will not be yours):
 ```
