@@ -6,14 +6,14 @@
 \usepackage[margin=2.5cm]{geometry} %layout
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[pdftex,urlcolor=blue,pdfstartview=FitH]{hyperref}
-\usepackage{hyperref}  
+% \usepackage{hyperref}  
 \usepackage{listings} 
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{array}
 \usepackage[section]{placeins}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-\usepackage[pdftex,urlcolor=blue,pdfstartview=FitH]{hyperref}
+% \usepackage[pdftex,urlcolor=blue,pdfstartview=FitH]{hyperref}
 
 \usepackage[ %quotation package
     left = \flqq,% 
@@ -63,7 +63,7 @@
   \large Sujet proposé par Marc Houssaye, directeur de MH-COMMUNICATION \\
   \large Encadré par François Rioult, enseignant-chercheur UCBN (GREYC) \\
     Université de Caen Normandie - M2-DNR2i \\
-    Code visualisable sur \href{<https://github.com/plabadille/cookedDishRecognizer>}{<github>}
+    Code visualisable sur \href{https://github.com/plabadille/cookedDishRecognizer}{github}
 }
 \author{\authorName}
 \date{\today}
@@ -124,11 +124,11 @@
       Voici une liste non exhaustive des API les plus réputées dans le domaine de la reconnaissance automatique d'image:
       \bigbreak
       \begin{itemize}
-        \item \href{<https://cloud.google.com/vision/>}{API Vision Google}
-        \item \href{<http://blog.clarifai.com/what-food-is-this-clarifais-food-recognition-technology-can-tell-you/#.WIS1NGqmmUk>}{Clarifai API}
-        \item \href{<http://cloudsight.ai/api>}{API Cloudsight}
-        \item \href{<https://www.microsoft.com/cognitive-services/en-us/computer-vision-api>}{Microsoft Computer Vision}
-        \item \href{<https://www.ibm.com/watson/developercloud/visual-recognition.html#how-it-works-block>}{IBM Visual Recognition}
+        \item \href{https://cloud.google.com/vision/}{API Vision Google}
+        \item \href{http://blog.clarifai.com/what-food-is-this-clarifais-food-recognition-technology-can-tell-you/#.WIS1NGqmmUk}{Clarifai API}
+        \item \href{http://cloudsight.ai/api}{API Cloudsight}
+        \item \href{https://www.microsoft.com/cognitive-services/en-us/computer-vision-api}{Microsoft Computer Vision}
+        \item \href{https://www.ibm.com/watson/developercloud/visual-recognition.html#how-it-works-block}{IBM Visual Recognition}
       \end{itemize}
       \bigbreak
 
@@ -141,17 +141,17 @@
       Ces API proposent une multitude de labels et chacun peuvent être assignés de façons différentes (un même plat n'aura que rarement le même label si la photo n'est pas la même car le système constatera une certaine différence qui fera pencher la balance un peu plus vers un autre label). N'étant également pas spécialisées, elles ne font pas la différence entre un snack et un plat par exemple.
       \bigbreak
 
-      En termes de résultats, les scores sont très serrés sur ces API: certaines sont meilleures que d'autres dans un domaine, mais cela reste difficile à juger car elles sont toutes très fiable (selon plusieurs sources, Clarifai serait la plus performante juste devant Google). Enfin, l'API Cloudsight est sujette à de nombreux doutes sur sa solution "automatisée". Il est possible qu'elle ne passe pas par des réseaux de neurones mais plutôt par des "fermes à clic" pour retourner des prédictions\footnote{Cf \href{<https://goberoi.com/comparing-the-top-five-computer-vision-apis-98e3e3d7c647\#.karm8bonu>}{Comparing the Top Five Computer Vision APIs}}.
+      En termes de résultats, les scores sont très serrés sur ces API: certaines sont meilleures que d'autres dans un domaine, mais cela reste difficile à juger car elles sont toutes très fiable (selon plusieurs sources, Clarifai serait la plus performante juste devant Google). Enfin, l'API Cloudsight est sujette à de nombreux doutes sur sa solution "automatisée". Il est possible qu'elle ne passe pas par des réseaux de neurones mais plutôt par des "fermes à clic" pour retourner des prédictions\footnote{Cf \href{https://goberoi.com/comparing-the-top-five-computer-vision-apis-98e3e3d7c647\#.karm8bonu}{Comparing the Top Five Computer Vision APIs}}.
 
       \subsection{Les autres}
       Ces API sont moins réputées mais généralement spécialisées dans la reconnaissance d'images représentant de la nourriture ce qui leurs donne un avantage par rapport aux plus connues. Cette liste n'est pas exhaustive:
 
       \bigbreak
       \begin{itemize}
-        \item \href{<http://foodai.org/>}{FOODAi Smart Food Recognition}
-        \item \href{<https://imagga.com/>}{Imagga's Image Recognition}
-        \item \href{<http://restb.ai/>}{Intelligent image recognition}
-        \item \href{<http://8bit.ai/>}{8bit API}
+        \item \href{http://foodai.org/}{FOODAi Smart Food Recognition}
+        \item \href{https://imagga.com/}{Imagga's Image Recognition}
+        \item \href{http://restb.ai/}{Intelligent image recognition}
+        \item \href{http://8bit.ai/}{8bit API}
       \end{itemize}
       \bigbreak
 
@@ -172,14 +172,14 @@
     Notre problème initial ne se pose pas car les humains ne sont physiquement pas apte à faire cette validation mais bien car cette tâche est ingrate et qu'elle est devenue impossible pour des raisons financières évidentes. Cette définition semble donc confirmer la pertinence des réseaux de neurones: s'ils sont basés sur la même logique de réflexion que nous et que nous étions capables de faire ce travail à la base, il n'y a pas de raison qu'on ne puisse pas valider nos images efficacement par ce biais.
     \bigbreak
 
-    Qu'en est-il de la fiabilité de cette technologie qui est encore très jeune et qui est de plus en plus présente depuis ces 2 dernières années? Et bien les évolutions en la matière ont été démesurée... là où il y a quelques années, les meilleurs modèles peinaient à atteindre les 60-70\% de précision, ils atteignent aujourd'hui les 97\% de précision\footnote{Cf \href{<http://xenon.stanford.edu/~pgolle/papers/dogcat.pdf>}{Machine Learning Attacks Against the Asirra CAPTCHA}}.
+    Qu'en est-il de la fiabilité de cette technologie qui est encore très jeune et qui est de plus en plus présente depuis ces 2 dernières années? Et bien les évolutions en la matière ont été démesurée... là où il y a quelques années, les meilleurs modèles peinaient à atteindre les 60-70\% de précision, ils atteignent aujourd'hui les 97\% de précision\footnote{Cf \href{http://xenon.stanford.edu/~pgolle/papers/dogcat.pdf}{Machine Learning Attacks Against the Asirra CAPTCHA}}.
 
 
     \section{Choix du modèle et de l'environnement}
 
-    J'ai choisi d'utiliser la librairie logicielle Tensorflow pour développer mon modèle qui est actuellement la plus performante et polyvalente en matière de deep learning.\footnote{Cf \href{<https://www.quora.com/Is-TensorFlow-better-than-other-leading-libraries-such-as-Torch-Theano>}{Explication informelle des différences entre Tensorflow et les autres librairies}}
+    J'ai choisi d'utiliser la librairie logicielle Tensorflow pour développer mon modèle qui est actuellement la plus performante et polyvalente en matière de deep learning.\footnote{Cf \href{https://www.quora.com/Is-TensorFlow-better-than-other-leading-libraries-such-as-Torch-Theano}{Explication informelle des différences entre Tensorflow et les autres librairies}}
     \medbreak
-    \say{ \emph{TensorFlow™ is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API.} \textbf{\href{<https://www.tensorflow.org/>}{ - Tensorflow}} }
+    \say{ \emph{TensorFlow™ is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API.} \textbf{\href{https://www.tensorflow.org/}{ - Tensorflow}} }
     \bigbreak
     
     Néanmoins, j'apprécie la logique du développement modulaire et dans ce sens, j'ai choisi de rajouter une couche en développant mon modèle avec Keras qui permet de simplifier la gestion du GPU pour le calcul mais également de développer des modèles facilement compatibles entre Tensorflow et Thenao\footnote{Théano est le principal concurent de Tensorflow}.
@@ -264,7 +264,7 @@
       \medbreak
       J'ai dans un premier temps classé en différentes catégories 3.000 images (fournie par Restofolio) qui avaient été manuellement rejeté par RestoFolio. De cette façon, j'ai pu voir les types d'images qui ne sont pas des plats les plus souvent ajoutés par les restaurateurs: photo de la salle du restaurant, de la carte/ardoise, publicité ou encore de matière première pour n'en citer que quelques uns.
       \medbreak
-      J'ai ensuite peuplé ces différentes catégories à partir de petits dataset trouvés sur le web afin de rééquilibrer les deux classes. J'ai enfin ajouté deux dataset de contenus divers (et qui ne contiennent pas de photo de plat) afin de prévoir certaines classes oubliées.\footnote{Toutes les classes ainsi que les dataset utilisé peuvent être consultées directement sur un readme disponible sur le \href{<https://github.com/plabadille/cookedDishRecognizer/blob/master/data-set/dataset_notCookedDish.txt>}{github du projet}.}
+      J'ai ensuite peuplé ces différentes catégories à partir de petits dataset trouvés sur le web afin de rééquilibrer les deux classes. J'ai enfin ajouté deux dataset de contenus divers (et qui ne contiennent pas de photo de plat) afin de prévoir certaines classes oubliées.\footnote{Toutes les classes ainsi que les dataset utilisé peuvent être consultées directement sur un readme disponible sur le \href{https://github.com/plabadille/cookedDishRecognizer/blob/master/data-set/dataset_notCookedDish.txt}{github du projet}.}
       \medbreak
       \begin{figure}[!h]%
         \centering
@@ -299,14 +299,14 @@
       \end{lstlisting}
 
     \section{Développement du modèle}
-    Dans cette section je vais présenter les extraits principaux du code du modèle afin d'expliquer le fonctionnement du modèle et de chacune de ses spécificités. Le code original dans son intégralité est visualisable sur le \href{<https://github.com/plabadille/cookedDishRecognizer/blob/master/cookedDishModel.py>}{github du projet}. Veuillez noter qu'il existe deux versions du modèle et du système de prédiction: 
+    Dans cette section je vais présenter les extraits principaux du code du modèle afin d'expliquer le fonctionnement du modèle et de chacune de ses spécificités. Le code original dans son intégralité est visualisable sur le \href{https://github.com/plabadille/cookedDishRecognizer/blob/master/cookedDishModel.py}{github du projet}. Veuillez noter qu'il existe deux versions du modèle et du système de prédiction: 
     \begin{itemize}
       \item La première ne peut être executée que dans un notebook Jupyter et permet d'avoir des indicateurs visuels sur les résultats du modèle.
       \item La seconde peut être executée directement en console (dans un environnement Tensorflow) mais ne donnera que des informations textuelles sur le modèle.
     \end{itemize}
 
       \subsection{Le modèle (cookedDishModel.py)}
-      Tout d'abord, je souhaite préciser que la base de ce code ne vient pas de moi. J'ai pris modèle sur un \href{<https://www.kaggle.com/vshevche/dogs-vs-cats-redux-kernels-edition/catdognet-keras-convnet-starter/run/790364>}{Convnet starter} de Jeff Delanay, lui-même fortement inspiré du tutoriel \href{<https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html>}{Building powerful image classification models using very little data} de Francois Chollet.
+      Tout d'abord, je souhaite préciser que la base de ce code ne vient pas de moi. J'ai pris modèle sur un \href{https://www.kaggle.com/vshevche/dogs-vs-cats-redux-kernels-edition/catdognet-keras-convnet-starter/run/790364}{Convnet starter} de Jeff Delanay, lui-même fortement inspiré du tutoriel \href{https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html}{Building powerful image classification models using very little data} de Francois Chollet.
       \medbreak
       Les différences principales avec ces deux modèles sont indiquées en commentaire dans le code au début du script. Globalement, j'ai fais du refactoring, adapté le modèle au besoin et ajouté plusieurs améliorations que je vais vous présenter maintenant (une cross validation par exemple).
       \bigbreak
@@ -323,9 +323,9 @@
       labels.append(0)
       \end{lstlisting}
       \medbreak
-      On va ensuite définir notre modèle. Un modèle est composé de différentes couches. Dans le cas présent, notre modèle est une version réduite de l'architecture VGG16\footnote{architecture VGG16: réseau à 16 couches utilisés par l'équipe VGG pour la compétition ILSVRC-2014 competition. Cf \href{<https://arxiv.org/abs/1409.1556>}{Very Deep Convolutional Networks for Large-Scale Image Recognition}}
+      On va ensuite définir notre modèle. Un modèle est composé de différentes couches. Dans le cas présent, notre modèle est une version réduite de l'architecture VGG16\footnote{architecture VGG16: réseau à 16 couches utilisés par l'équipe VGG pour la compétition ILSVRC-2014 competition. Cf \href{https://arxiv.org/abs/1409.1556}{Very Deep Convolutional Networks for Large-Scale Image Recognition}}
       \medbreak
-      Dans notre cas vous pouvez voir l'utilisation de quatre blocs convolutionnels\footnote{Cf \href{<https://cs231n.github.io/convolutional-networks/\#conv>}{Convolutional Layer}} ainsi qu'un "fully-connected" classifieur\footnote{Cf \href{<https://cs231n.github.io/convolutional-networks/\#fc>}{Fully-connected layer}}. Grossièrement, chaque couche convenlutionelle n'a accès qu'aux couches inférieures: l'apprentissage du modèle passe par elles (on dit qu'elles sont connectées localement). La couche "fully-connected", elle, a accès à tout le modèle: c'est par elle que sont faites les prédictions après la période d'apprentissage. Enfin l'optimisateur et l'objectif sélectionné sont préconisés pour les modèles de classification binaire.
+      Dans notre cas vous pouvez voir l'utilisation de quatre blocs convolutionnels\footnote{Cf \href{https://cs231n.github.io/convolutional-networks/\#conv}{Convolutional Layer}} ainsi qu'un "fully-connected" classifieur\footnote{Cf \href{https://cs231n.github.io/convolutional-networks/\#fc}{Fully-connected layer}}. Grossièrement, chaque couche convenlutionelle n'a accès qu'aux couches inférieures: l'apprentissage du modèle passe par elles (on dit qu'elles sont connectées localement). La couche "fully-connected", elle, a accès à tout le modèle: c'est par elle que sont faites les prédictions après la période d'apprentissage. Enfin l'optimisateur et l'objectif sélectionné sont préconisés pour les modèles de classification binaire.
 
       \begin{lstlisting}[title=cookedDishModel.py (l.133)]
       optimizer = RMSprop(lr=1e-4)
@@ -609,9 +609,9 @@
       \medbreak
       Voici les différentes solutions pour utiliser ce modèle pré-entrainé à partir d'une autre application n'évoluant pas dans un environnement approprié:
       \begin{itemize}
-        \item \href{<https://github.com/transcranial/keras-js/blob/master/README.md>}{Keras-js}: permet la création d'une application en VueJs pouvant charger le modèle directement dans le navigateur puis effectuer des prédictions à la demande.
-        \item \href{<https://www.tensorflow.org/deploy/tfserve>}{TensorFlow Serving}: permets d'installer le réseau de neurones sur un serveur dans son environnement pour ensuite retourner des prédictions par le biais d'une API.
-        \item \href{<https://github.com/riga/tfdeploy>}{TfDeploy}: permet d'exporter un réseau de neurones pré-entrainé directement dans une application python par le biais de numpy.
+        \item \href{https://github.com/transcranial/keras-js/blob/master/README.md}{Keras-js}: permet la création d'une application en VueJs pouvant charger le modèle directement dans le navigateur puis effectuer des prédictions à la demande.
+        \item \href{https://www.tensorflow.org/deploy/tfserve}{TensorFlow Serving}: permets d'installer le réseau de neurones sur un serveur dans son environnement pour ensuite retourner des prédictions par le biais d'une API.
+        \item \href{https://github.com/riga/tfdeploy}{TfDeploy}: permet d'exporter un réseau de neurones pré-entrainé directement dans une application python par le biais de numpy.
       \end{itemize}
 
       \subsection{Du modèle binaire vers un modèle multi-classe}
@@ -647,31 +647,31 @@
 
       \subsection{Littérature et documentation}
       \begin{itemize}
-        \item \href{<http://xenon.stanford.edu/~pgolle/papers/dogcat.pdf>}{Machine Learning Attacks Against the Asirra CAPTCHA} de Philippe Golle (Palo Alto Research Center).
-        \item \href{<https://arxiv.org/abs/1409.1556>}{Very Deep Convolutional Networks for Large-Scale Image Recognition} de Karen Simonyan et Andrew Zisserman
-        \item \href{<https://cs231n.github.io/convolutional-networks/>}{Convolutional Neural Networks (CNNs / ConvNets)} de la Stanford CS class
-        \item \href{<https://deeplearning4j.org/glossary>}{Deep Learning and Neural Network Glossary} de deeplearning4j
-        \item \href{<http://webia.lip6.fr/~cord/pdfs/publis/CordCooking2015icme.pdf>}{RECIPE RECOGNITION WITH LARGE MULTIMODAL FOOD DATASET} de Xin Wang, Devinder Kumar, Nicolas Thome, Matthieu Cord et Frédéric Precioso.
-        \item \href{<https://arxiv.org/pdf/1510.02078v1.pdf>}{Leveraging Context to Support Automated Food Recognition in Restaurants} de Vinay Bettadapura, Edison Thomaz, Aman Parnami, Gregory D. Abowd et Irfan Essa
-        \item \href{<https://arxiv.org/pdf/1604.07953v2.pdf>}{Simultaneous Food Localization and Recognition} de Marc Bolanos et Petia Radeva
-        \item \href{<https://arxiv.org/pdf/1612.06543v1.pdf>}{Wide-Slice Residual Networks for Food Recognition} de Niki Martinel, Gian Luca Foresti et Christian Micheloni
-        \item \href{<https://keras.io/>}{documentation Keras}
-        \item \href{<https://www.tensorflow.org/get\_started/get\_started>}{documentation Tensorflow}
-        \item \href{<https://www.kaggle.com/wiki/Home>}{documentation Kaggle }
+        \item \href{http://xenon.stanford.edu/~pgolle/papers/dogcat.pdf}{Machine Learning Attacks Against the Asirra CAPTCHA} de Philippe Golle (Palo Alto Research Center).
+        \item \href{https://arxiv.org/abs/1409.1556}{Very Deep Convolutional Networks for Large-Scale Image Recognition} de Karen Simonyan et Andrew Zisserman
+        \item \href{https://cs231n.github.io/convolutional-networks/}{Convolutional Neural Networks (CNNs / ConvNets)} de la Stanford CS class
+        \item \href{https://deeplearning4j.org/glossary}{Deep Learning and Neural Network Glossary} de deeplearning4j
+        \item \href{http://webia.lip6.fr/~cord/pdfs/publis/CordCooking2015icme.pdf}{RECIPE RECOGNITION WITH LARGE MULTIMODAL FOOD DATASET} de Xin Wang, Devinder Kumar, Nicolas Thome, Matthieu Cord et Frédéric Precioso.
+        \item \href{https://arxiv.org/pdf/1510.02078v1.pdf}{Leveraging Context to Support Automated Food Recognition in Restaurants} de Vinay Bettadapura, Edison Thomaz, Aman Parnami, Gregory D. Abowd et Irfan Essa
+        \item \href{https://arxiv.org/pdf/1604.07953v2.pdf}{Simultaneous Food Localization and Recognition} de Marc Bolanos et Petia Radeva
+        \item \href{https://arxiv.org/pdf/1612.06543v1.pdf}{Wide-Slice Residual Networks for Food Recognition} de Niki Martinel, Gian Luca Foresti et Christian Micheloni
+        \item \href{https://keras.io/}{documentation Keras}
+        \item \href{https://www.tensorflow.org/get\_started/get\_started}{documentation Tensorflow}
+        \item \href{https://www.kaggle.com/wiki/Home}{documentation Kaggle }
       \end{itemize}
 
       \subsection{Data-set}
       \begin{itemize}
-        \item \href{<http://vis-www.cs.umass.edu/lfw/>}{lfw face data-set}
-        \item \href{<http://web.mit.edu/torralba/www/indoor.html>}{Indoor Scene Recognition data-set}
-        \item \href{<https://graphics.cs.msu.ru/en/research/projects/msr/geometry>}{EurasianCitiesBase data-set}
-        \item \href{<http://cvcl.mit.edu/database.htm>}{Visual Cognition Laboratory data-set}
-        \item \href{<https://www.csc.kth.se/~heydarma/Datasets.html>}{KTH-ANIMALS data-set} 
-        \item \href{<https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition>}{dogsVsCats data-set}
-        \item \href{<https://www.vision.caltech.edu/Image_Datasets/Caltech256/>}{Caltech256 data-set}
-        \item \href{<http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html>}{voc2007 data-set}
-        \item \href{<http://press.liacs.nl/mirflickr/mirdownload.html>}{mirflickr data-set}
-        \item \href{<https://www.vision.ee.ethz.ch/datasets_extra/food-101/>}{ETHZ-Food-101 data-set}
+        \item \href{http://vis-www.cs.umass.edu/lfw/}{lfw face data-set}
+        \item \href{http://web.mit.edu/torralba/www/indoor.html}{Indoor Scene Recognition data-set}
+        \item \href{https://graphics.cs.msu.ru/en/research/projects/msr/geometry}{EurasianCitiesBase data-set}
+        \item \href{http://cvcl.mit.edu/database.htm}{Visual Cognition Laboratory data-set}
+        \item \href{https://www.csc.kth.se/~heydarma/Datasets.html}{KTH-ANIMALS data-set} 
+        \item \href{https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition}{dogsVsCats data-set}
+        \item \href{https://www.vision.caltech.edu/Image_Datasets/Caltech256/}{Caltech256 data-set}
+        \item \href{http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html}{voc2007 data-set}
+        \item \href{http://press.liacs.nl/mirflickr/mirdownload.html}{mirflickr data-set}
+        \item \href{https://www.vision.ee.ethz.ch/datasets_extra/food-101/}{ETHZ-Food-101 data-set}
       \end{itemize}
           
 \end{document}
